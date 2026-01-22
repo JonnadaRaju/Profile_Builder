@@ -42,14 +42,14 @@ The objective was to **automate profile creation** using backend scripting and r
 ```
 Profile-Builder/
 │
-├── generate_pages.py        # Python automation script
-├── students.csv             # Student data source
-├── index.html               # Portfolio HTML template
-├── assets/                  # Student images
+├── generate_pages.py        
+├── students.csv             
+├── index.html               
+├── assets/                  
 │   ├── 101.jpeg
 │   └── 102.jpeg
 │
-└── students_pages/          # Auto-generated output
+└── students_pages/          
     ├── 101/
     │   └── index.html
     ├── 102/
