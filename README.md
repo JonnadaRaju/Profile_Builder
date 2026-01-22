@@ -82,7 +82,13 @@ Profile-Builder/
    - Generates a personalized `index.html` page  
 
 ---
+## 🧪 Example Output
 
+Below is an example of a generated student profile with QR code access:
+
+![Student Profile Example](images/AIK073930_front.png)
+
+---
 ## ▶️ How to Run the Project
 
 ### Step 1: Prepare CSV File
