@@ -39,66 +39,83 @@ The objective was to **automate profile creation** using backend scripting and r
 
 ## 📂 Project Structure
 
+```
 Profile-Builder/
 │
-├── generate_pages.py # Python automation script
-├── students.csv # Student data source
-├── index.html # Portfolio HTML template
-├── assets/ # Student images
-│ ├── 101.jpeg
-│ └── 102.jpeg
+├── generate_pages.py        # Python automation script
+├── students.csv             # Student data source
+├── index.html               # Portfolio HTML template
+├── assets/                  # Student images
+│   ├── 101.jpeg
+│   └── 102.jpeg
 │
-└── students_pages/ # Auto-generated output
-├── 101/
-│ └── index.html
-├── 102/
-│ └── index.html
-└── 103/
-└── index.html
-
+└── students_pages/          # Auto-generated output
+    ├── 101/
+    │   └── index.html
+    ├── 102/
+    │   └── index.html
+    └── 103/
+        └── index.html
+```
 
 ---
 
 ## 📄 How It Works
 
 1. **students.csv** stores student details such as:
-   - student_id  
-   - name  
-   - email  
-   - github  
-   - linkedin  
-   - projects  
+   - `student_id`
+   - `name`
+   - `email`
+   - `github`
+   - `linkedin`
+   - `projects`
 
-2. **index.html** acts as a reusable template and contains placeholders:
+2. **index.html** acts as a reusable template and contains placeholders like:
+   ```
+   {{name}}, {{email}}, {{github}}, {{linkedin}}, {{student_id}}
+   ```
 
 3. **generate_pages.py**:
-- Reads data from the CSV file  
-- Replaces placeholders in the HTML template  
-- Creates a separate folder for each student  
-- Generates a personalized `index.html` page  
+   - Reads data from the CSV file  
+   - Replaces placeholders in the HTML template  
+   - Creates a separate folder for each student  
+   - Generates a personalized `index.html` page  
 
 ---
 
 ## ▶️ How to Run the Project
 
 ### Step 1: Prepare CSV File
+
 Ensure `students.csv` follows this format:
 
-csv
+```csv
 student_id,name,email,github,linkedin,projects
 101,Raju Jonnada,raju@email.com,https://github.com/raju,https://linkedin.com/in/raju,https://github.com/raju?tab=repositories
+```
+
+---
 
 ### Step 2: Add Student Images
 
+```
 assets/
  └── 101.jpeg
  └── 102.jpeg
+```
+
+---
 
 ### Step 3: Run the Script
 
+```bash
 python generate_pages.py
+```
+
+---
 
 ### Step 4: View Generated Profiles
 
+```
 students_pages/<student_id>/index.html
-
+```
